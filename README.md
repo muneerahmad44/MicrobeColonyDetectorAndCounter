@@ -4,7 +4,17 @@ A deep learning-based system for automated detection, classification, and counti
 
 ## Overview
 
-This system analyzes petri dish images to detect and classify bacterial colonies into 7 distinct categories. It provides automated colony counting per class along with comprehensive statistics and visualizations.
+This system analyzes petri dish images to detect and classify bacterial colonies into 7 distinct categories = [
+    'B.subtilis',
+    'P.aeruginosa',
+    'E.coli',
+    'S.aureus',
+    'C.albicans',
+    'Contamination',
+    'Defect'
+] 
+
+. It provides automated colony counting per class along with comprehensive statistics and visualizations.
 
 ## Features
 
