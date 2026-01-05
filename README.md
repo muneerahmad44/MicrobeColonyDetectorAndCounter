@@ -13,6 +13,13 @@ This system analyzes petri dish images to detect and classify bacterial colonies
 - **Statistical Analysis**: Generates detailed statistics and visual graphs
 - **User-friendly Interface**: Built with Streamlit for easy interaction
 
+## Model
+
+This system uses a **fine-tuned YOLOv11m** model trained specifically for bacterial colony detection and classification.
+
+- **Download Model**: [YOLOv11m Fine-tuned Weights](#) *(https://drive.google.com/file/d/1HDQ-ipIuEzjvsKBi7FAQsFTEWNQrS6ar/view?usp=sharing)*
+- **Configuration**: After downloading the model, update the model path in `colony_detection.py`
+
 ## Installation
 
 1. Clone the repository:
@@ -26,6 +33,12 @@ cd MicrobeColonyDetectorAndCounter
 pip install -r requirements.txt
 ```
 
+3. Download the fine-tuned YOLOv11m model and update the model path in `colony_detection.py`:
+```python
+# In colony_detection.py, update the model path
+model_path = "path/to/your/downloaded/model.pt"
+```
+
 ## Usage
 
 Run the application using Streamlit:
@@ -37,14 +50,14 @@ The application will open in your default web browser where you can upload petri
 
 ## Documentation
 
-- **System Architecture**: [View Flow Diagram](#) *https://github.com/muneerahmad44/MicrobeColonyDetectorAndCounter/blob/main/flow_charts/flowchartcomplete.png*
-- **System Results**: [View Results](#) *https://github.com/muneerahmad44/MicrobeColonyDetectorAndCounter/tree/main/system%20results*
-- **Model Performance**: [View Fine-tuned Model Metrics](#) *https://github.com/muneerahmad44/MicrobeColonyDetectorAndCounter/tree/main/fine%20tuned%20model%20results*
+- **System Architecture**: [View Flow Diagram](https://github.com/muneerahmad44/MicrobeColonyDetectorAndCounter/blob/main/flow_charts/flowchartcomplete.png)
+- **System Results**: [View Results](https://github.com/muneerahmad44/MicrobeColonyDetectorAndCounter/tree/main/system%20results)
+- **Model Performance**: [View Fine-tuned Model Metrics](https://github.com/muneerahmad44/MicrobeColonyDetectorAndCounter/tree/main/fine%20tuned%20model%20results)
 
 ## How It Works
 
 1. Upload an image of a petri dish
-2. The system processes the image using a trained deep learning model
+2. The system processes the image using the fine-tuned YOLOv11m model
 3. Colonies are detected and classified into one of 7 categories
 4. Results display:
    - Colony count per class
@@ -55,8 +68,6 @@ The application will open in your default web browser where you can upload petri
 
 See `requirements.txt` for a complete list of dependencies.
 
-
-
 ## Contact
 
-*muneerahmed.dev@gmail.com*
+**Email**: muneerahmed.dev@gmail.com
